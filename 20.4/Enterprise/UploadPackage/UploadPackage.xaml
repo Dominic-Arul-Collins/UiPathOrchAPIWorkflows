@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>624,823.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1013,945</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>UploadPackage_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -61,7 +61,7 @@
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="UploadPackage" sap:VirtualizedContainerService.HintSize="634,741.333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="UploadPackage" sap:VirtualizedContainerService.HintSize="634,780" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strAuthResponse" />
       <Variable x:TypeArguments="njl:JObject" Name="jObjAuthResp" />
@@ -71,9 +71,9 @@
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-        <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,107.166666666667</av:PointCollection>
-        <x:Double x:Key="Height">705.166666666667</x:Double>
+        <x:Double x:Key="Height">744.5</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -83,11 +83,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,107.166666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,100.666666666667</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,207.833333333334 300,247.833333333334</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,94</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,201.166666666667 300,247.833333333334</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="First, we need to authenticate to the Orchestrator before calling any other endpoints using HTTP Request activity" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="Authentication - HTTP Request activity" EndPoint="[in_strOrchURL+&quot;/api/account/authenticate&quot;]" sap:VirtualizedContainerService.HintSize="200,100.666666666667" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[strAuthResponse]" TimeoutMS="60000">
+      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="First, we need to authenticate to the Orchestrator before calling any other endpoints using HTTP Request activity" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="Authentication - HTTP Request activity" EndPoint="[in_strOrchURL+&quot;/api/account/authenticate&quot;]" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[strAuthResponse]" TimeoutMS="60000">
         <ui:HttpClient.Attachments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Attachments>
@@ -98,15 +98,9 @@
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Headers>
         <ui:HttpClient.Parameters>
-          <InArgument x:TypeArguments="x:String" x:Key="userNameorEmailAddress">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strUserName" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="password">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strPassword" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="tenancyName">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strTenantName" />
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="userNameorEmailAddress">[in_strUserName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="password">[in_strPassword]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="tenancyName">[in_strTenantName]</InArgument>
         </ui:HttpClient.Parameters>
         <ui:HttpClient.UrlSegments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
@@ -122,11 +116,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,247.833333333334</av:Point>
-              <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,300.5 300,347.833333333334</av:PointCollection>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,298.833333333334 300,347.833333333334</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[strAuthResponse]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[strAuthResponse]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,11 +132,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">133,347.833333333334</av:Point>
-                  <av:Size x:Key="ShapeSize">334,107.333333333333</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,455.166666666667 300,505.166666666667</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">334,102</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,449.833333333334 300,505.166666666667</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:DeserializeJson x:TypeArguments="njl:JObject" sap2010:Annotation.AnnotationText="Converting string to JObject to fetch the authentication token returned from the above HTTP Request activity" DisplayName="Deserialize the output JSON" sap:VirtualizedContainerService.HintSize="334,107.333333333333" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jObjAuthResp]" JsonString="[strAuthResponse]">
+              <ui:DeserializeJson x:TypeArguments="njl:JObject" sap2010:Annotation.AnnotationText="Converting string to JObject to fetch the authentication token returned from the above HTTP Request activity" DisplayName="Deserialize the output JSON" sap:VirtualizedContainerService.HintSize="334,102" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jObjAuthResp]" JsonString="[strAuthResponse]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -154,26 +148,20 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,505.166666666667</av:Point>
-                      <av:Size x:Key="ShapeSize">200,67.3333333333333</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">300,572.5 300,622.5</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,64</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">300,569.166666666667 300,622.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="Upload a new package to the Orchestrator" BodyFormat="" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="UploadPackage" EndPoint="[in_strOrchURL+&quot;/odata/Processes/UiPath.Server.Configuration.OData.UploadPackage&quot;]" sap:VirtualizedContainerService.HintSize="200,67.3333333333333" sap2010:WorkflowViewState.IdRef="HttpClient_5" Method="POST" Result="[strUploadPackageResp]" TimeoutMS="6000">
+                  <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="Upload a new package to the Orchestrator" BodyFormat="" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="UploadPackage" EndPoint="[in_strOrchURL+&quot;/odata/Processes/UiPath.Server.Configuration.OData.UploadPackage&quot;]" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="HttpClient_5" Method="POST" Result="[strUploadPackageResp]" TimeoutMS="6000">
                     <ui:HttpClient.Attachments>
-                      <InArgument x:TypeArguments="x:String" x:Key="filename">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strPackageFileName" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="filename">[in_strPackageFileName]</InArgument>
                     </ui:HttpClient.Attachments>
                     <ui:HttpClient.Cookies>
                       <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                     </ui:HttpClient.Cookies>
                     <ui:HttpClient.Headers>
-                      <InArgument x:TypeArguments="x:String" x:Key="Authorization">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;Bearer &quot;+jObjAuthResp(&quot;result&quot;).ToString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-OrganizationUnitId">
-                        <Literal x:TypeArguments="x:String">1</Literal>
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer "+jObjAuthResp("result").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-OrganizationUnitId">1</InArgument>
                     </ui:HttpClient.Headers>
                     <ui:HttpClient.Parameters>
                       <InArgument x:TypeArguments="x:String" x:Key="Content-Type">multipart/form-data</InArgument>
@@ -192,10 +180,10 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">200,622.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[strUploadPackageResp]">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[strUploadPackageResp]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -215,5 +203,14 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,722.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,22</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+    </FlowStep>
   </Flowchart>
 </Activity>
