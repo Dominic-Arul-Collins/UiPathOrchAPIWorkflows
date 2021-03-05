@@ -7,9 +7,10 @@
     "UiPath.Mail.Activities": "[1.7.2]",
     "UiPath.System.Activities": "[19.4.0]",
     "UiPath.UIAutomation.Activities": "[19.11.2]",
-    "UiPath.WebAPI.Activities": "[1.4.4]"
+    "UiPath.WebAPI.Activities": "[1.7.0-alpha.1444451]"
   },
   "webServices": [],
+  "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.2.0.108",
   "projectVersion": "1.0.0",
@@ -22,7 +23,9 @@
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -31,7 +34,22 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfoCollection": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
   },
-  "expressionLanguage": "VisualBasic"
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "UploadPackage.xaml",
+      "uniqueId": "ed8b924b-53bc-44ac-a746-c212a690de6b",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
 }
